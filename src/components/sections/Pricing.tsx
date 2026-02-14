@@ -58,33 +58,33 @@ export default function Pricing() {
     });
 
     return (
-        <section id="pricing" className="py-24 bg-gray-50 dark:bg-gray-900 relative overflow-hidden transition-colors">
+        <section id="pricing" className="py-24 bg-slate-50 relative overflow-hidden transition-colors">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6">
+                    <h2 className="text-4xl md:text-5xl font-clash font-bold mb-6 text-black">
                         Simple, Transparent <span className="text-primary">Pricing</span>
                     </h2>
-                    <p className="text-gray-500 text-lg mb-8">
+                    <p className="text-slate-500 text-lg mb-8">
                         Choose the plan that fits your growth stage. No hidden fees.
                     </p>
 
                     {/* Toggle */}
                     <div className="flex items-center justify-center gap-4 mb-8">
-                        <span className={`text-sm font-bold ${!isAnnual ? 'text-primary' : 'text-gray-400'}`}>Monthly</span>
+                        <span className={`text-sm font-bold ${!isAnnual ? 'text-primary' : 'text-slate-400'}`}>Monthly</span>
                         <button
                             onClick={() => setIsAnnual(!isAnnual)}
-                            className="relative w-16 h-8 bg-gray-200 dark:bg-gray-700 rounded-full p-1 transition-colors"
+                            className="relative w-16 h-8 bg-slate-200 rounded-full p-1 transition-colors"
                         >
                             <div className={`w-6 h-6 bg-white rounded-full shadow-md transform transition-transform duration-300 ${isAnnual ? 'translate-x-8' : ''}`} />
                         </button>
-                        <span className={`text-sm font-bold ${isAnnual ? 'text-primary' : 'text-gray-400'}`}>
+                        <span className={`text-sm font-bold ${isAnnual ? 'text-primary' : 'text-slate-400'}`}>
                             Yearly <span className="text-xs text-green-500 font-normal ml-1">(-20%)</span>
                         </span>
                     </div>
 
                     {/* Traffic Slider */}
-                    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 max-w-md mx-auto">
-                        <label className="text-sm font-medium text-gray-500 mb-2 block">Estimated Traffic: <span className="font-bold text-primary">{sliderValue * 10}k / mo</span></label>
+                    <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 max-w-md mx-auto">
+                        <label className="text-sm font-medium text-slate-500 mb-2 block">Estimated Traffic: <span className="font-bold text-primary">{sliderValue * 10}k / mo</span></label>
                         <input
                             type="range"
                             min="1"
@@ -92,7 +92,7 @@ export default function Pricing() {
                             step="1"
                             value={sliderValue}
                             onChange={(e) => setSliderValue(Number(e.target.value))}
-                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary"
+                            className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary"
                         />
                     </div>
                 </div>
@@ -101,7 +101,7 @@ export default function Pricing() {
                     {plans.map((plan) => (
                         <div
                             key={plan.name}
-                            className={`pricing-card relative p-8 rounded-3xl border ${plan.popular ? 'border-primary shadow-2xl shadow-primary/20 scale-105 z-10' : 'border-gray-200 dark:border-gray-800 bg-white dark:bg-black/40'} backdrop-blur-sm transition-all hover:border-primary/50 group`}
+                            className={`pricing-card relative p-8 rounded-3xl border ${plan.popular ? 'border-primary shadow-2xl shadow-primary/20 scale-105 z-10 bg-white' : 'border-slate-200 bg-white'} backdrop-blur-sm transition-all hover:border-primary/50 group`}
                         >
                             {plan.popular && (
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
@@ -109,30 +109,30 @@ export default function Pricing() {
                                 </div>
                             )}
 
-                            <h3 className="text-2xl font-bold font-clash mb-2">{plan.name}</h3>
-                            <p className="text-gray-500 text-sm mb-6 max-w-[200px]">{plan.description}</p>
+                            <h3 className="text-2xl font-bold font-clash mb-2 text-black">{plan.name}</h3>
+                            <p className="text-slate-500 text-sm mb-6 max-w-[200px]">{plan.description}</p>
 
                             <div className="mb-6">
-                                <span className="text-5xl font-bold text-gray-900 dark:text-white font-clash">${calculatePrice(plan.basePrice)}</span>
-                                <span className="text-gray-400">/mo</span>
+                                <span className="text-5xl font-bold text-black font-clash">${calculatePrice(plan.basePrice)}</span>
+                                <span className="text-slate-400">/mo</span>
                             </div>
 
-                            <button className={`w-full py-4 rounded-xl font-bold mb-8 transition-transform active:scale-95 duration-200 ${plan.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'}`}>
+                            <button className={`w-full py-4 rounded-xl font-bold mb-8 transition-transform active:scale-95 duration-200 ${plan.popular ? 'bg-primary text-white hover:bg-primary/90' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}>
                                 Get Started
                             </button>
 
                             <div className="space-y-4">
                                 {plan.features.map((feature) => (
-                                    <div key={feature} className="flex items-center gap-3 text-sm">
-                                        <div className="w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center flex-shrink-0">
+                                    <div key={feature} className="flex items-center gap-3 text-sm text-slate-700">
+                                        <div className="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0">
                                             <Check size={12} strokeWidth={3} />
                                         </div>
                                         <span>{feature}</span>
                                     </div>
                                 ))}
                                 {plan.missing.map((feature) => (
-                                    <div key={feature} className="flex items-center gap-3 text-sm text-gray-400">
-                                        <div className="w-5 h-5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-400 flex items-center justify-center flex-shrink-0">
+                                    <div key={feature} className="flex items-center gap-3 text-sm text-slate-400">
+                                        <div className="w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center flex-shrink-0">
                                             <X size={12} strokeWidth={3} />
                                         </div>
                                         <span className="line-through">{feature}</span>

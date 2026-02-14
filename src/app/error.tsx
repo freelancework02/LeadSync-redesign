@@ -14,13 +14,13 @@ export default function Error({
     }, [error]);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-50 dark:bg-slate-900 px-6 text-center">
-            <h2 className="text-3xl font-clash font-bold text-slate-900 dark:text-white mb-4">Something went wrong!</h2>
-            <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-md">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-white px-6 text-center">
+            <h2 className="text-3xl font-clash font-bold text-black mb-4">Something went wrong!</h2>
+            <p className="text-slate-600 mb-8 max-w-md">
                 An unexpected error occurred while rendering this page.
             </p>
-            <div className="bg-red-50 dark:bg-red-900/10 border border-red-100 dark:border-red-900/30 p-4 rounded-lg mb-8 text-left overflow-auto max-w-full">
-                <code className="text-xs text-red-600 dark:text-red-400">
+            <div className="bg-red-50 border border-red-100 p-4 rounded-lg mb-8 text-left overflow-auto max-w-full">
+                <code className="text-xs text-red-600">
                     {error.message || "Unknown error"}
                 </code>
             </div>

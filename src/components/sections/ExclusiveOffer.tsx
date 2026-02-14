@@ -24,11 +24,11 @@ export default function ExclusiveOffer() {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="py-24 relative overflow-hidden bg-slate-100 dark:bg-slate-900/50">
+        <section ref={containerRef} className="py-24 relative overflow-hidden bg-white">
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none" />
 
             <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-12 bg-white dark:bg-slate-800 rounded-3xl p-8 md:p-16 shadow-2xl border border-slate-200 dark:border-slate-700 offer-content relative overflow-hidden group">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-12 bg-slate-50 rounded-3xl p-8 md:p-16 shadow-2xl border border-slate-200 offer-content relative overflow-hidden group">
 
                     {/* Decorative Background */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2" />
@@ -39,11 +39,11 @@ export default function ExclusiveOffer() {
                         <span className="inline-block px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-bold uppercase tracking-wider mb-4 border border-yellow-200">
                             Secret Developer Offer
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-clash font-bold text-slate-900 dark:text-white mb-6">
+                        <h2 className="text-4xl md:text-5xl font-clash font-bold text-black mb-6">
                             Feeling Lucky? <br />
                             <span className="text-indigo-600">Scratch to Reveal</span>
                         </h2>
-                        <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                        <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                             We hid a special discount code for visitors who scroll this far.
                             Scratch the card to unlock your exclusive deal.
                             <span className="block mt-2 text-sm italic text-slate-400">* Valid for next 24 hours only.</span>

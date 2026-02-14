@@ -1,17 +1,19 @@
-import Hero from '@/components/sections/Hero';
-import Features from '@/components/sections/Features';
-import TimeSavings from '@/components/sections/TimeSavings';
-import ExclusiveOffer from '@/components/sections/ExclusiveOffer';
-import Pricing from '@/components/sections/Pricing';
+import CorporateHero from '@/components/corporate/CorporateHero';
+import HomeAboutTeaser from '@/components/corporate/HomeAboutTeaser';
+import HomeServicesTeaser from '@/components/corporate/HomeServicesTeaser';
+import HomeProductTeaser from '@/components/corporate/HomeProductTeaser';
+import Testimonials from '@/components/corporate/Testimonials';
+import HomeCTA from '@/components/corporate/HomeCTA';
 
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
-      <TimeSavings />
-      <Pricing />
-      <ExclusiveOffer />
+      <CorporateHero />
+      <HomeAboutTeaser />
+      <HomeServicesTeaser />
+      <HomeProductTeaser />
+      <Testimonials />
+      <HomeCTA />
     </>
   );
 }

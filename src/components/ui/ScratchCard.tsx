@@ -25,13 +25,13 @@ export default function ScratchCard() {
             canvas.width = rect.width;
             canvas.height = rect.height;
 
-            // Draw the scratch-off overlay
-            ctx.fillStyle = '#1e293b';
+            // Draw the scratch-off overlay (Silver/Gray)
+            ctx.fillStyle = '#cbd5e1'; // Slate 300
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             // Add decorative pattern
             for (let i = 0; i < 40; i++) {
-                ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.1})`;
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.random() * 0.4})`;
                 ctx.beginPath();
                 ctx.arc(
                     Math.random() * canvas.width,
@@ -45,14 +45,14 @@ export default function ScratchCard() {
 
             // Add text
             ctx.font = 'bold 24px "Clash Display", Inter, sans-serif';
-            ctx.fillStyle = '#fbbf24';
+            ctx.fillStyle = '#0f172a'; // Slate 900
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillText('✨ SCRATCH TO WIN ✨', canvas.width / 2, canvas.height / 2);
 
             // Add subtitle
             ctx.font = '14px Inter, sans-serif';
-            ctx.fillStyle = '#94a3b8';
+            ctx.fillStyle = '#475569'; // Slate 600
             ctx.fillText('Use your mouse or finger', canvas.width / 2, canvas.height / 2 + 30);
         };
 
@@ -220,30 +220,30 @@ export default function ScratchCard() {
     return (
         <div
             ref={containerRef}
-            className="relative w-full max-w-[340px] aspect-[4/3] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 mx-auto transform transition-all duration-300 hover:shadow-3xl"
+            className="relative w-full max-w-[340px] aspect-[4/3] bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-slate-200 mx-auto transform transition-all duration-300 hover:shadow-3xl"
         >
             {/* Prize Content (Underlay) */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-800 dark:via-slate-850 dark:to-slate-900 z-0">
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 z-0">
                 <div className={`w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 text-white rounded-full flex items-center justify-center mb-4 shadow-lg ${isRevealed ? 'animate-[bounce_1s_ease-in-out_3]' : ''}`}>
                     <Gift className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-bold font-clash text-slate-900 dark:text-white mb-2">
+                <h3 className="text-2xl font-bold font-clash text-black mb-2">
                     🎉 YOU WON! 🎉
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400 mb-6">
+                <p className="text-sm text-slate-600 mb-6">
                     Exclusive Awwwards Discount
                 </p>
 
                 <div
-                    className="bg-white dark:bg-slate-900 border-2 border-dashed border-indigo-400 dark:border-indigo-500 p-4 rounded-xl w-full max-w-[240px] mb-3 relative overflow-hidden group cursor-pointer transform transition-all hover:scale-105 active:scale-95"
+                    className="bg-white border-2 border-dashed border-indigo-400 p-4 rounded-xl w-full max-w-[240px] mb-3 relative overflow-hidden group cursor-pointer transform transition-all hover:scale-105 active:scale-95"
                     onClick={handleCopyCode}
                 >
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span className="relative text-2xl font-mono font-bold text-indigo-600 dark:text-indigo-400 tracking-widest">
+                    <span className="relative text-2xl font-mono font-bold text-indigo-600 tracking-widest">
                         AWWWARDS20
                     </span>
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wide font-semibold">
+                <p className="text-xs text-slate-500 uppercase tracking-wide font-semibold">
                     👆 Click to copy • Get 20% OFF
                 </p>
             </div>

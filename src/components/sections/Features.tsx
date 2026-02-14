@@ -100,16 +100,16 @@ export default function Features() {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} id="features" className="relative h-screen bg-slate-900 text-white overflow-hidden">
+        <section ref={containerRef} id="features" className="relative h-screen bg-white text-black overflow-hidden">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-0 w-full h-full bg-slate-950 opacity-90 -z-10" />
-            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-900/40 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 left-0 w-full h-full bg-slate-50 opacity-90 -z-10" />
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
 
             <div className="absolute top-8 left-8 md:left-20 z-10 pointer-events-none">
                 <h2 className="text-3xl md:text-5xl font-clash font-bold leading-tight">
-                    System <span className="text-blue-500">Modules</span>
+                    System <span className="text-primary">Modules</span>
                 </h2>
-                <p className="mt-2 text-slate-400 max-w-sm text-sm md:text-base">
+                <p className="mt-2 text-slate-600 max-w-sm text-sm md:text-base">
                     Explore the core components of the LeadSync 360 architecture.
                 </p>
             </div>
@@ -123,41 +123,41 @@ export default function Features() {
                     {modules.map((module, i) => (
                         <div
                             key={i}
-                            className="feature-card relative w-[85vw] md:w-[800px] h-[65vh] md:h-[600px] flex-shrink-0 rounded-[2rem] bg-slate-800/50 backdrop-blur-xl border border-slate-700 overflow-hidden group hover:border-slate-500 transition-colors shadow-2xl flex flex-col md:flex-row"
+                            className="feature-card relative w-[85vw] md:w-[800px] h-[65vh] md:h-[600px] flex-shrink-0 rounded-[2rem] bg-white backdrop-blur-xl border border-slate-200 overflow-hidden group hover:border-slate-300 transition-colors shadow-xl flex flex-col md:flex-row"
                         >
                             {/* Left/Top Content */}
-                            <div className="p-8 md:p-10 flex flex-col justify-between w-full md:w-1/3 bg-slate-900/50">
+                            <div className="p-8 md:p-10 flex flex-col justify-between w-full md:w-1/3 bg-slate-50">
                                 <div>
-                                    <div className={`w-12 h-12 rounded-xl ${module.color} flex items-center justify-center mb-6 shadow-lg`}>
+                                    <div className={`w-12 h-12 rounded-xl ${module.color} flex items-center justify-center mb-6 shadow-md`}>
                                         {module.icon}
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-3 font-clash text-white leading-tight">{module.title}</h3>
-                                    <p className="text-slate-400 text-sm leading-relaxed mb-6">{module.description}</p>
+                                    <h3 className="text-2xl font-bold mb-3 font-clash text-black leading-tight">{module.title}</h3>
+                                    <p className="text-slate-600 text-sm leading-relaxed mb-6">{module.description}</p>
 
                                     <div className="flex flex-wrap gap-2">
                                         {module.tags.map(tag => (
-                                            <span key={tag} className="text-xs font-semibold bg-slate-800 text-slate-300 px-2 py-1 rounded-md border border-slate-700">
+                                            <span key={tag} className="text-xs font-semibold bg-slate-200 text-slate-700 px-2 py-1 rounded-md border border-slate-300">
                                                 {tag}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="mt-auto pt-6 text-slate-600 font-mono text-sm">
+                                <div className="mt-auto pt-6 text-slate-400 font-mono text-sm">
                                     Module 0{i + 1}
                                 </div>
                             </div>
 
                             {/* Right/Bottom Image Area */}
-                            <div className="relative w-full md:w-2/3 h-full bg-slate-900 overflow-hidden group">
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent z-10" />
+                            <div className="relative w-full md:w-2/3 h-full bg-slate-100 overflow-hidden group">
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-100/80 via-transparent to-transparent z-10" />
 
                                 {/* Browser Wrapper for consistent look */}
-                                <div className="absolute inset-4 md:inset-8 rounded-lg overflow-hidden shadow-2xl ring-1 ring-slate-700 transform group-hover:scale-[1.02] transition-transform duration-700 ease-out">
-                                    <div className="h-6 bg-slate-800 border-b border-slate-700 flex items-center px-3 gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-red-500/50" />
-                                        <div className="w-2 h-2 rounded-full bg-amber-500/50" />
-                                        <div className="w-2 h-2 rounded-full bg-green-500/50" />
+                                <div className="absolute inset-4 md:inset-8 rounded-lg overflow-hidden shadow-xl ring-1 ring-slate-200 transform group-hover:scale-[1.02] transition-transform duration-700 ease-out bg-white">
+                                    <div className="h-6 bg-slate-50 border-b border-slate-200 flex items-center px-3 gap-2">
+                                        <div className="w-2 h-2 rounded-full bg-red-400/50" />
+                                        <div className="w-2 h-2 rounded-full bg-amber-400/50" />
+                                        <div className="w-2 h-2 rounded-full bg-green-400/50" />
                                     </div>
                                     <img
                                         src={module.image}
