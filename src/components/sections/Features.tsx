@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
 import { Shield, Mail, Database, Upload, Layout, Share2, UserX, Users } from 'lucide-react';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,10 +160,11 @@ export default function Features() {
                                         <div className="w-2 h-2 rounded-full bg-amber-400/50" />
                                         <div className="w-2 h-2 rounded-full bg-green-400/50" />
                                     </div>
-                                    <img
+                                    <Image
                                         src={module.image}
                                         alt={module.title}
-                                        className="w-full h-full object-cover object-top"
+                                        fill
+                                        className="object-cover object-top"
                                     />
                                 </div>
                             </div>

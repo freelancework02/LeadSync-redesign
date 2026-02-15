@@ -39,7 +39,7 @@ export default function Testimonials() {
                             <div className="flex gap-1 mb-4">
                                 {[1, 2, 3, 4, 5].map(s => <Star key={s} size={16} className="fill-yellow-400 text-yellow-400" />)}
                             </div>
-                            <p className="text-slate-600 italic mb-6">"{t.text}"</p>
+                            <p className="text-slate-600 italic mb-6">&quot;{t.text}&quot;</p>
                             <div>
                                 <h4 className="font-bold text-black">{t.name}</h4>
                                 <p className="text-xs text-primary font-semibold">{t.role}</p>

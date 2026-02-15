@@ -59,7 +59,7 @@ export default function TimeSavings() {
                         <span className="text-primary">Start Automating.</span>
                     </h2>
                     <p className="text-lg text-slate-600">
-                        Drag the slider to see how much time and money you could be saving with LeadSync 360's automation engine.
+                        Drag the slider to see how much time and money you could be saving with LeadSync 360&apos;s automation engine.
                     </p>
                 </div>
 

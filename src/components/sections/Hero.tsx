@@ -148,10 +148,12 @@ export default function Hero() {
                             {/* Fallback pattern if image fails, or use one of the uploaded images */}
                             <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200" />
                             {/* We will try to use the dashboard image here */}
-                            <img
+                            <Image
                                 src="/images/composeemail.png"
                                 alt="Dashboard Interface"
-                                className="object-cover w-full h-full transform transition-transform"
+                                fill
+                                className="object-cover transform transition-transform"
+                                priority
                             />
                         </div>
 
