@@ -6,6 +6,8 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
+import { InteractiveGrid } from '../ui/InteractiveGrid';
+
 export default function CorporateHero() {
     const containerRef = useRef<HTMLElement>(null);
 
@@ -21,6 +23,8 @@ export default function CorporateHero() {
 
     return (
         <section ref={containerRef} id="home" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+
+            <InteractiveGrid />
             <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-4xl mx-auto text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-6 border border-blue-100 hero-text">
@@ -56,13 +60,6 @@ export default function CorporateHero() {
                 </div>
             </div>
 
-            {/* Background Decorations */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-                <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-3xl opacity-60" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-indigo-50/60 rounded-full blur-3xl opacity-60" />
-                <div className="absolute top-[20%] left-[10%] w-4 h-4 rounded-full bg-blue-200/50" />
-                <div className="absolute top-[30%] right-[15%] w-6 h-6 rounded-full bg-indigo-200/50" />
-            </div>
         </section>
     );
 }
