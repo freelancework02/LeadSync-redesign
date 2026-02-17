@@ -13,7 +13,7 @@ export default function HomeCTA() {
                     Ready to Scale?
                 </h2>
                 <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Partner with a team that understands both code and business. Let's build something extraordinary together.
+                    Partner with a team that understands both code and business. Let&apos;s build something extraordinary together.
                 </p>
                 <div className="flex justify-center gap-4">
                     <Link href="/contact" className="px-10 py-5 bg-black text-white rounded-full font-bold text-lg hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95 flex items-center gap-2">

@@ -20,7 +20,7 @@ export default function About() {
                             From India to <br /> New Hampshire
                         </h2>
                         <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                            LeadSync isn't just a company; it's a global bridge. Founded in India, we've built strong roots in the American market, specifically collaborating with industry leaders in <span className="font-semibold text-black">New Hampshire</span>.
+                            LeadSync isn&apos;t just a company; it&apos;s a global bridge. Founded in India, we&apos;ve built strong roots in the American market, specifically collaborating with industry leaders in <span className="font-semibold text-black">New Hampshire</span>.
                         </p>
                         <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                             Our unique dual-shore model allows us to offer 24/7 development cycles, combining the technical prowess of Indian engineering with the strategic business insights of the US market.

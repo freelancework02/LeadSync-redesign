@@ -166,7 +166,7 @@ export default function Services() {
                         From Concept to <span className="text-primary">Scale</span>
                     </h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
-                        As a New Hampshire-based technology partner with global delivery capabilities, we don't just write code. We build business assets. Our comprehensive suite of services is designed to handle every stage of your digital evolution.
+                        As a New Hampshire-based technology partner with global delivery capabilities, we don&apos;t just write code. We build business assets. Our comprehensive suite of services is designed to handle every stage of your digital evolution.
                     </p>
                 </div>
 
